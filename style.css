@@ -1,0 +1,110 @@
+:root {
+    --dark-green: #1d312a;
+    --cream-bg: #f7f3ed;
+    --gold: #c5a367;
+    --input-bg: #ece9e2;
+}
+
+body {
+    background-color: var(--cream-bg);
+    font-family: 'Verdana', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#main_content {
+    width: 550px;
+}
+
+.form_box {
+    background-color: #fff;
+    border: 1px solid var(--gold);
+    /* SISI POJOK TUMPUL */
+    border-radius: 20px; 
+    overflow: hidden; /* Agar header ikut tumpul */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form_title {
+    background-color: var(--dark-green);
+    color: var(--cream-bg);
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form_content {
+    padding: 30px;
+}
+
+.form_group {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form_label {
+    flex: 0 0 100px;
+    font-weight: bold;
+    color: var(--dark-green);
+    font-size: 13px;
+}
+
+.input_container {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+/* INPUT DENGAN POJOK TUMPUL */
+.form_textbox, .form_textbox_short {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 10px; /* Tumpul */
+    font-family: 'Verdana';
+    transition: 0.3s;
+}
+
+.form_textbox:focus {
+    outline: none;
+    border-color: var(--gold);
+    background-color: #fff;
+}
+
+.form_textbox_short { flex: 1; }
+
+.form_group.vertical {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form_label_full {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.radio_group { display: flex; gap: 20px; }
+.radio_item { display: flex; align-items: center; gap: 5px; }
+
+/* TOMBOL TUMPUL */
+.form_button {
+    background-color: var(--dark-green);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px; /* Sangat tumpul (Pill shape) */
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.form_button:hover {
+    background-color: var(--gold);
+}
